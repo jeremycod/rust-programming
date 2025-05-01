@@ -1,0 +1,9 @@
+*
+!/**/
+!*.*
+**/target/**
+._target
+Cargo.lock
+.idea
+*.iml
+/rust-programming-main/
