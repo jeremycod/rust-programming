@@ -1,4 +1,4 @@
-ust std::fmt::Display;
+use std::fmt::Display;
 
 struct Pair<T> {
     x: T,
