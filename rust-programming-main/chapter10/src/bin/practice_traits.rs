@@ -1,20 +1,32 @@
 use std::f64::consts::PI;
-/*
+use std::fmt::Debug;
 
- */
-
+fn display_shape_info<T>(shape: &T)
+where T: Shape + Debug {
+    println!("Debug: {:?}, {}", shape, shape.area());
+}
+fn get_perimeter_plus_one(shape: &impl Shape) -> f64 {
+    shape.perimeter() + 1.0
+}
+fn get_area<T: Shape>(shape: &T) -> f64 {
+    shape.area()
+}
 fn print_shape_info(shape: &dyn Shape){
     println!("Shape area: {}", shape.area());
     println!("Perimeter: {}", shape.perimeter());
 }
+
 trait Shape {
     fn area(&self) -> f64;
     fn perimeter(&self) -> f64;
 }
+
+#[derive(Debug)]
 struct Rectangle {
     width: f64,
     height: f64
 }
+#[derive(Debug)]
 struct Circle {
     radius: f64
 }
@@ -48,4 +60,7 @@ fn main () {
     for s in shapes {
         print_shape_info(s);
     }
+    println!("shape area: {}", get_area(&rec));
+    println!("perimeter plus one: {}", get_perimeter_plus_one(&rec));
+    display_shape_info(&rec);
 }
