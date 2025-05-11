@@ -26,6 +26,7 @@ fn internal_adder(a: i32, b: i32) -> i32 {
 }
 
 mod should_panic;
+mod practicing_testing;
 
 #[cfg(test)]
 mod tests {
