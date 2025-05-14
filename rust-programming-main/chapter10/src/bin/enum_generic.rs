@@ -1,4 +1,4 @@
-enum Option<T> {
+enum Option<T, E> {
     Ok(T),
     Err(E),
 }
