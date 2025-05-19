@@ -1,7 +1,8 @@
 [package]
 name = "threads"
 version = "0.1.0"
-authors = ["Wojciech Gawroński <afronski@gmail.com>"]
+authors = ["Zoran Jeremic <zoran.jeremic@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+rand = "0.8.5"
